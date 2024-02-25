@@ -1,24 +1,37 @@
-*{
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-body{
+body {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   height: 100vh;
-  background-color: black;
+  background-image: url(images/calculator.jpg);
 }
 
-ul{
+span{
+  color: white;
+  margin-top: 20px;
+  font-size: 13px;
+  padding: 4px;
+  color: white;
+  background-color: rgb(55, 55, 55);
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+ul {
   margin: 0;
   padding: 0;
   list-style-type: none;
 }
 
 button {
-  width:119px;
+  width: 119px;
   height: 75px;
   cursor: pointer;
   margin: 2px 3px;
@@ -31,35 +44,56 @@ button {
   color: white;
 }
 
-.calculator{
+.operator {
+  color: rgb(66, 115, 238);
+  font-size: 25px;
+}
+
+button:hover {
+  background-color: rgb(44, 44, 44);
+}
+
+button:active {
+  transform: translateY(1.5px);
+}
+
+.calculator {
+  border: 1px solid white;
   border-radius: 12px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 505px;
-  height: 610px;
+  width: 500px;
+  height: 550px;
   background-color: rgb(35, 35, 35);
 }
 
-.display{
-  /* border: 2px solid red; */
-  width:500px;
-  height: 200px;
-  padding: 50px 0px;
-  text-align: end;
+.display {
+  width: 500px;
+  height: 150px;
+  padding: 30px 30px;
   font-weight: bolder;
-  font-size: larger;
+  font-size: 30px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   color: white;
+  display: flex;
+  justify-content: end;
+  align-items: end;
+  word-wrap: break-word;
+  word-break: break-all;
 }
 
-.buttons{
+.buttons {
   display: flex;
   height: 400px;
   width: 500px;
 }
 
 .equals {
-  background-color: rgb(34, 97, 232);
+  background-color: rgb(66, 115, 238);
+}
+
+button.equals:hover {
+  background-color: rgb(70, 108, 192);
 }
