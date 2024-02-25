@@ -86,7 +86,11 @@ function operate() {
 }
 
 ACBtn.addEventListener("click", () => {
-  location.reload();
+  display.textContent = "";
+  num1 = '';
+  num2 = '';
+  operator = '';
+  haveDot = false;
 });
 
 deleteBtn.addEventListener("click", () => {
