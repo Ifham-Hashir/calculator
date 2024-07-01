@@ -18,8 +18,8 @@ function div(num1, num2){
   return num1 / num2;
 }
 
-function operate(num1, op, num2){
-  switch(op)
+function operate(num1, operator, num2){
+  switch(operator)
   {
     case '+':
       return add(num1, num2);
@@ -35,3 +35,14 @@ function operate(num1, op, num2){
   }
 }
 
+const display = document.querySelector(".display");
+const numBtn = document.querySelectorAll(".num");
+
+for(let i = 0; i < numBtn.length; i++){
+  numBtn[i].addEventListener("click", () => {
+    if(display.textContent.length <= 7){
+      display.textContent += numBtn[i].innerText;
+    }
+
+  });
+}

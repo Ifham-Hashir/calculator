@@ -28,6 +28,7 @@ body{
   display: flex;
   justify-content: end;
   align-items: end;
+  font-size: larger;
   padding: 10px;
 }
 
@@ -53,4 +54,9 @@ button{
   width: 70px;
   height: 70px;
   margin: 1px;
+  font-weight: bolder;
+  font-size: medium;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border-radius: 10px;
+  background-color:rgb(129, 203, 206);
 }
