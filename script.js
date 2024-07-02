@@ -1,5 +1,5 @@
-let firstNum = 0;
-let secondNum = 0;
+let firstNum = null;
+let secondNum = null;
 let operator = '';
 
 function add(num1, num2){
@@ -40,15 +40,32 @@ const numBtn = document.querySelectorAll(".num");
 
 for(let i = 0; i < numBtn.length; i++){
   numBtn[i].addEventListener("click", () => {
-    if(display.textContent[0] === "0"){
-      display.textContent ="";
-    }
+    if(!operator){
+      if(display.textContent[0] === "0"){
+        display.textContent ="";
+      }
+  
+      if(display.textContent.length <= 7){
+        display.textContent += numBtn[i].innerText;
+      }
+  
+      firstNum = Number(display.textContent);
 
-    if(display.textContent.length <= 7){
-      display.textContent += numBtn[i].innerText;
-    }
+    }else{
+      if(secondNum === null){
+        display.textContent ="";
+      }
 
-    firstNum = Number(display.textContent);
+        if(display.textContent[0] === "0"){
+          display.textContent ="";
+        }
+    
+        if(display.textContent.length <= 7){
+          display.textContent += numBtn[i].innerText;
+        }
+
+        secondNum = Number(display.textContent);
+    }
 
   });
 }
@@ -58,9 +75,11 @@ for(let i = 0; i < numBtn.length; i++){
 const opBtn = document.querySelectorAll(".op");
 for(let i = 0; i < opBtn.length; i++){
   opBtn[i].addEventListener("click", () => {
-    operator = opBtn[i].innerText;
-    display.textContent = `${firstNum} ${operator} `;
-
+    if(firstNum !== null && secondNum === null){
+      operator = opBtn[i].innerText;
+      display.textContent = `${firstNum} ${operator} `;
+    }
 
   });
 }
+
