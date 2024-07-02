@@ -96,3 +96,11 @@ equalBtn.addEventListener("click", () => {
   display.textContent = `${firstNum}`;
   secondNum = null;
 });
+
+const clearBtn = document.querySelector(".clear");
+clearBtn.addEventListener("click", () => {
+  display.textContent = "";
+  firstNum = null;
+  secondNum = null;
+  operator = "";
+});
