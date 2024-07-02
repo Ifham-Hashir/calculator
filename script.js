@@ -80,6 +80,19 @@ for(let i = 0; i < opBtn.length; i++){
       display.textContent = `${firstNum} ${operator} `;
     }
 
+    if(firstNum && operator && secondNum){
+      firstNum = operate(firstNum, operator, secondNum);
+      operator = opBtn[i].innerText;
+      display.textContent = `${firstNum} ${operator} `;
+      secondNum = null;
+    }
+
   });
 }
 
+const equalBtn = document.querySelector(".equals");
+equalBtn.addEventListener("click", () => {
+  firstNum = operate(firstNum, operator, secondNum);
+  display.textContent = `${firstNum}`;
+  secondNum = null;
+});
