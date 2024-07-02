@@ -40,9 +40,27 @@ const numBtn = document.querySelectorAll(".num");
 
 for(let i = 0; i < numBtn.length; i++){
   numBtn[i].addEventListener("click", () => {
+    if(display.textContent[0] === "0"){
+      display.textContent ="";
+    }
+
     if(display.textContent.length <= 7){
       display.textContent += numBtn[i].innerText;
     }
+
+    firstNum = Number(display.textContent);
+
+  });
+}
+
+
+
+const opBtn = document.querySelectorAll(".op");
+for(let i = 0; i < opBtn.length; i++){
+  opBtn[i].addEventListener("click", () => {
+    operator = opBtn[i].innerText;
+    display.textContent = `${firstNum} ${operator} `;
+
 
   });
 }
