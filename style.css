@@ -28,7 +28,7 @@ body{
   display: flex;
   justify-content: end;
   align-items: end;
-  font-size: larger;
+  font-size: 30px;
   padding: 10px;
 }
 
@@ -38,7 +38,7 @@ body{
   width: 300px;
   height: 400px;
   padding: 10px;
-  background-color:darkslategray
+  background-color:rgb(0, 0, 0);
 }
 
 .row{
@@ -58,5 +58,5 @@ button{
   font-size: medium;
   font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   border-radius: 10px;
-  background-color:rgb(129, 203, 206);
+  background-color:rgb(255, 255, 255);
 }
